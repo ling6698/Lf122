@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Attitech.ph</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </title>
+    <title>Pop-up Landing Page </title>
+<style>
+      /* Styles for the pop-up */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 999;
+
+
+    }
+      .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      font-family: Georgia;
+   
+    }
+      .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+        /* Styles for the content */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Serif, Times New Roman;
+      font-size: 15px;
+    }
+    .container {
+      text-align: center;
+      padding: 50px;
+
+    }
+       h2 {
+      margin-top: 0;
+      text-align: center;
+      font-family: Serif, Monospace;
+      color: #00008B;
+
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Serif, Monospace; 
+    }
+       .intro {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+      .call-button {
+        position: relative;
+        bottom: 10px;
+        left: 230px;
+        right: 250px;
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+
+
+
+    }
+      .call-button:hover {
+      background-color: #0056b3;
+
+    }
+      * {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+  </style>
+</head>
+<body>
+        <!-- Pop-up Section -->
+  <div class="overlay" id="overlay"></div>
+  <div class="popup" id="popup">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h2>Welcome to Attitech!</h2>
+    <div class="intro">
+      <p align=” justify”> Thanks to our knowledgeable and skilled staff, we offer a variety of services like
+            customer support, data entry, IT support, back-office operations, and more. Our main objective is to help 
+          businesses reduce waste, control costs, and boost overall production.</p>
+      <p align=” justify”> Experience the Attitech advantage by taking the plunge. Whether you need seasoned customer
+              service support, dependable accounting and bookkeeping, innovative web development, or virtual assistance, 
+            we have the knowledge and experience to help your company stand out.</p>
+      <p align=” justify”>Contact us today to unlock your business full potential. Trust Attitech for excellence in service, 
+               reliability, and a partnership that exceeds expectations.</p>
+     <div class="center"Call Us Now >
+       
+     </div>
+    </div>
+    <a href="tel:+917-793-1013" class="call-button">Call Us Now</a>
+  </div>
+
+  <!-- The rest of your HTML code -->
+  <!-- Navbar -->
+  <!-- ... Your existing navbar code ... -->
+
+  <!-- Page content -->
+  <!-- ... Your existing page content ... -->
+
+        <script>
+    // Show the pop-up when the page loads
+    document.addEventListener("DOMContentLoaded", function() {
+      setTimeout(function() {
+        openPopup();
+      }, 2000); // Delay the popup for 2 seconds (adjust as needed)
+    });
+
+    // Function to open the pop-up
+    function openPopup() {
+      document.getElementById('overlay').style.display = 'block';
+      document.getElementById('popup').style.display = 'block';
+    }
+
+    // Function to close the pop-up
+    function closePopup() {
+      document.getElementById('overlay').style.display = 'none';
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
+  
+
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SKILLS</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More"> MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button"> SERVICES </a>
+        <a href="#" class="w3-bar-item w3-button">PARTNERSHIP</a>
+      
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()"> HOME </a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()"> ABOUT </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()"> SKILLS</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()"> SERVICES </a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="1.jpg" style="width: 100%" >
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">   
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="picture attitech.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+   
+    </div>
+  </div>
+    
+    </div>
+  </div>
+  <div>
+    <div class="wrapper">
+    </div>
+      <div class="content">
+          <article>
+          <h1> What we do?</h1>
+          <article>
+            <h2 style="text-align:center;">OUR SERVICES</h2>
+            <br>
+            <article>
+              
+              <h2 style="text-align:center ;">Web Development</h2>
+              <p align="center">Looking for Filipino developers to grow your web development<br> company?
+                For various Australian web companies, we<br>
+               have a particularly strong team of developers<br> under the guidance of our Australian CEO.</p>
+              <br>
+            
+              <article>
+                <h2 style="text-align:center;">Graphic Design</h2>
+                <p align="center">There are number of our clients who employ graphic<br>
+                 designers for their print to web to sublimated <br>work for clothing manufacturers.
+                 The same as the web development teams, 
+                 <br> our Australian CEO mentors the graphic designers.</p>
+                <br>
+                <article>
+                  <h2 style="text-align:center;">General Admin Staff</h2>
+                  <p align="center">Administrative employees can be educated to apply
+                   <br>all the marketing methods you need to use but don't <br>have time for,similar to your typical VA or 
+                   "Virtual Assistant."<br> Work ON your business rather than IN it.</p>
+                  <br>
+                  <article>
+                    <h2 style="text-align:center;">Appointment Setting</h2>
+                    <p align="center">We have clients using appointment setters to maximize 
+                      <br>their time, whether it's calling on their current client <br>database or giving quality, 
+                      "warm"<br> leads to their sales manager.</p>
+                    <br>
+                    <article>
+                      <h2 style="text-align:center;">Customer Support Staff</h2>
+                      <p align="center">You've probably heard of Telstra, eBay, and 
+                        <br>AT&T outsourcing their call centers; today, SME's can <br>do the same, saving up to 70% on costs. Several of our
+                        <br> clients use teams for inbound voice and email customer.</p>
+                      <br>
+                      <article>
+                        <h2 style="text-align:center;">Accountants & Bookkeepers</h2>
+                        <p align="center">Expand your business with bookkeepers or certified<br>
+                         public accountants at our office. This industry also <br>has a lot of areas that can be outsourced.<br> 
+                       In our office, we already have accounting firm with accountants on board.</p>
+                        <br>
+                        <article>
+                          <h2 style="text-align:center;">Social Media Marketing</h2>
+                          <p align="center">Some people refer to it as a "necessary evil" something <br>
+                            you should be doing but can't since you don't have time.<br> 
+                            Your offshore personnel can be trained to implement online marketing,<br>
+                          lead generating, and social media marketing methods.</p>
+                          <br>
+                          <article>
+                            <h2 style="text-align:center;">Virtual Assistant</h2>
+                            <p align="center">One solution that has gained significant popularity is<br>
+                             the utilization of virtual assistants. In our office,<br> virtual assistants offer a range of benefits that<br>
+                              can revolutionize the way individuals and businesses operate.</p>
+
+         </article>
+      </div>
+  </div>
+
+
+  <!--  -->
+  <div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">    </h2>
+      <p class="w3-opacity w3-center"><i>  </i></p><br>
+
+    
+
+  <!-- Modal -->
+  <div id="Modal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal w3-center w3-padding-32"> 
+        <span onclick="document.getElementById('Modal').style.display='none'" 
+       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i> </h2>
+      </header>
+      <div class="w3-container">
+        <p><label><i class="fa fa-shopping-cart"></i>  </label></p>
+        <input class="w3-input w3-border" type="text" placeholder="How many?">
+        <p><label><i class="fa fa-user"></i>  </label></p>
+        <input class="w3-input w3-border" type="text" placeholder="Enter email">
+        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right"> <i class="fa fa-check"></i></button>
+        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'"> <i class="fa fa-remove"></i></button>
+        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h1 class="w3-wide w3-center">We will always be in touch</h1>
+    <p class="w3-opacity w3-center"><i> CONTACT US</i></p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> Philippines, Cebu, Lapu-Lapu City<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +917-793-1013  <br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: support@attitech.ph<br>
+      </div>
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  
+<!-- End Page Content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <p class="w3-medium"> Copyright © 2023 Attitech.  <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"> All Rights Reserved | Terms of use | Privacy Policy.</a></p>
+</footer>
+  <script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      setTimeout(function() {
+        openPopup();
+      }, 2000); // Delay the popup for 2 seconds (adjust as needed)
+    });
+    
+    function openPopup() {
+      document.getElementById('overlay').style.display = 'block';
+      document.getElementById('popup').style.display = 'block';
+    }
+    
+    function closePopup() {
+      document.getElementById('overlay').style.display = 'none';
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
+
+
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
